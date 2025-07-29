@@ -1,10 +1,9 @@
-
 #!/bin/bash
 
 set -e
 
 VERSION="v0.12.2"
-FILENAME="NoiseTorch_x64_$VERSION.tgz"
+FILENAME="NoiseTorch_x64.tgz"
 DOWNLOAD_URL="https://github.com/noisetorch/NoiseTorch/releases/download/$VERSION/$FILENAME"
 INSTALL_DIR="$HOME/bin"
 ICON_DIR="$HOME/.local/share/icons"
@@ -13,7 +12,7 @@ DESKTOP_DIR="$HOME/.local/share/applications"
 # Step 1: Download NoiseTorch
 echo "🔽 Downloading NoiseTorch..."
 mkdir -p "$INSTALL_DIR"
-curl -L "$DOWNLOAD_URL" -o "$HOME/$FILENAME"
+curl -L -A "Mozilla/5.0" "$DOWNLOAD_URL" -o "$HOME/$FILENAME"
 
 # Step 2: Extract
 echo "📦 Extracting to $INSTALL_DIR..."
